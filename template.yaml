@@ -28,7 +28,7 @@ Resources:
       - Key: Servico
         Value: SQS
 
-   LambdaCriaClienteEventSourceMapping:
+  LambdaCriaClienteEventSourceMapping:
     Type: AWS::Lambda::EventSourceMapping
     Properties:
       BatchSize: 10
