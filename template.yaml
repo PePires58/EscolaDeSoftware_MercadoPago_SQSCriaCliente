@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Escola de Software - Usuarios - DynamoDB usuarios
+Parameters:
+  NomeFila:
+    Description: Nome da Fila
+    Type: String
+    Default: tbes_usuarios
+  Environment:
+    Description: Environment
+    Type: String
+    Default: "dev"
+
+Resources:
+  MercadoPagoSQSCriaCliente:
+    Type: AWS::SQS::Queue
+    Properties: 
+      DelaySeconds: 0
+      MaximumMessageSize: 262
+      MessageRetentionPeriod: 3600
+      QueueName: !Ref NomeFila
+      ReceiveMessageWaitTimeSeconds: 0
+      VisibilityTimeout: 30
+      Tags: 
+      - Key: Ambiente
+        Value: !Ref Environment
+      - Key: Microservico
+        Value: MercadoPago
+      - Key: Servico
+        Value: SQS

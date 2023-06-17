@@ -1,0 +1,6 @@
+{
+  "Parameters": {
+    "Environment": "prod",
+    "NomeFila": "sqs_mercadopago_criacliente"
+  }
+}
