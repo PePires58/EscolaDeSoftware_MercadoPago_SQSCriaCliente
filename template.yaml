@@ -20,6 +20,7 @@ Resources:
       QueueName: !Ref NomeFila
       ReceiveMessageWaitTimeSeconds: 0
       VisibilityTimeout: 30
+      SqsManagedSseEnabled: false
       Tags: 
       - Key: Ambiente
         Value: !Ref Environment
@@ -27,11 +28,3 @@ Resources:
         Value: MercadoPago
       - Key: Servico
         Value: SQS
-
-  LambdaCriaClienteEventSourceMapping:
-    Type: AWS::Lambda::EventSourceMapping
-    Properties:
-      BatchSize: 10
-      Enabled: true
-      EventSourceArn: !GetAtt MercadoPagoSQSCriaCliente.Arn
-      FunctionName: !Sub "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${Environment}_escoladesoftware-mercadopago-lambdacriarclientefn"
