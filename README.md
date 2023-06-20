@@ -1,18 +1,18 @@
-# DynamoDB - Usuarios - Escola de software
+# Escola de software - Mercado Pago - SQS cria cliente
 
-Esse repositório contém a criação do DynamoDB para o microserviço de usuarios da escola de software.
+Esse repositório contém a criação de um SQS para a criação dos dados dos clientes da escola de software.
 
 Recursos criados:
-- DynamoDB Table
+- SQS
 
 Obrigado
 <hr/>
 
-# DynamoDB - Users - Escola de Software
+# Escola de software - Mercado Pago - SQS create Client
 
-This repository contains a DynamoDb creation for the users microservice of escola de software.
+This repository contains a SQS to create the clients of escola de software
 
 Resources created:
-- DynamoDB Table
+- SQS
 
 Thanks a lot
